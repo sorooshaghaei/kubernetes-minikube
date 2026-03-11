@@ -1,5 +1,13 @@
+% !TeX program = xelatex
+% !TeX root = guide.tex
 \documentclass[11pt,a4paper]{article}
 
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
 \usepackage[a4paper,margin=20mm]{geometry}
 \usepackage{microtype}
 \usepackage[table]{xcolor}
@@ -51,6 +59,7 @@
 \Urlmuskip=0mu plus 1mu
 
 \begin{document}
+\hypersetup{pageanchor=false}
 
 \begin{titlepage}
 \thispagestyle{empty}
@@ -93,8 +102,9 @@
 \end{tabularx}
 
 \vspace{1cm}
-{\sffamily\large March 11, 2026\par}
+{\sffamily\large \today\par}
 \end{titlepage}
+\hypersetup{pageanchor=true}
 
 \tableofcontents
 \newpage
